@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:cia/ui/common_drawer.dart';
+
 import 'package:cia/ui/custom_float.dart';
 import 'package:cia/utils/uidata.dart';
+import 'package:cia/pages/edit_profile.dart';
 
 class CommonScaffold extends StatelessWidget {
   final appTitle;
@@ -105,7 +106,7 @@ class CommonScaffold extends StatelessWidget {
           )
         ],
       ),
-      drawer: showDrawer ? CommonDrawer() : null,
+      
       body: bodyData,
       floatingActionButton: showFAB
           ? CustomFloat(
@@ -116,7 +117,9 @@ class CommonScaffold extends StatelessWidget {
                     )
                   : null,
               icon: floatingIcon,
-              qrCallback: () {},
+              qrCallback: () {Navigator.push(
+    context, new MaterialPageRoute(
+      builder: (context) => new EditProfile()));},
             )
           : null,
       floatingActionButtonLocation: centerDocked

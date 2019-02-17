@@ -17,7 +17,7 @@ class ProfileOnePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 ProfileTile(
-                  title: "Pawan Kumar",
+                  title: "Vamsi",
                   subtitle: "Developer",
                 ),
                 Padding(
@@ -25,11 +25,7 @@ class ProfileOnePage extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
-                      IconButton(
-                        icon: Icon(Icons.chat),
-                        color: Colors.black,
-                        onPressed: () {},
-                      ),
+                      
                       Container(
                         decoration: BoxDecoration(
                           borderRadius:
@@ -40,17 +36,12 @@ class ProfileOnePage extends StatelessWidget {
                           ),
                         ),
                         child: CircleAvatar(
-                          backgroundImage: NetworkImage(
-                              "https://avatars0.githubusercontent.com/u/12619420?s=460&v=4"),
-                          foregroundColor: Colors.black,
+                          
+                          backgroundImage: AssetImage("assets/img/myself.jpeg"),
                           radius: 30.0,
                         ),
                       ),
-                      IconButton(
-                        icon: Icon(Icons.call),
-                        color: Colors.black,
-                        onPressed: () {},
-                      ),
+                     
                     ],
                   ),
                 )
@@ -159,11 +150,12 @@ class ProfileOnePage extends StatelessWidget {
   }
 
   Widget _scaffold() => CommonScaffold(
-        appTitle: "View Profile",
+        appTitle: "Profile",
         bodyData: bodyData(),
         showFAB: true,
         showDrawer: true,
-        floatingIcon: Icons.person_add,
+        floatingIcon: Icons.edit,
+      
       );
 
   @override
@@ -179,21 +171,21 @@ Widget followColumn(Size deviceSize) => Container(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
           ProfileTile(
-            title: "1.5K",
+            title: "   0",
             subtitle: "Posts",
           ),
+          // ProfileTile(
+          //   title: "2.5K",
+          //   subtitle: "Followers",
+          // ),
           ProfileTile(
-            title: "2.5K",
-            subtitle: "Followers",
+            title: "     0",
+            subtitle: "Credit Points",
           ),
-          ProfileTile(
-            title: "10K",
-            subtitle: "Comments",
-          ),
-          ProfileTile(
-            title: "1.2K",
-            subtitle: "Following",
-          )
+          // ProfileTile(
+          //   title: "1.2K",
+          //   subtitle: "Following",
+          // )
         ],
       ),
     );

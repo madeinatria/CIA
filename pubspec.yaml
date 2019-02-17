@@ -11,6 +11,8 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^0.1.2
+  http: ^0.12.0+1
+
 
 dev_dependencies:
   flutter_test:
@@ -27,6 +29,7 @@ flutter:
       - assets/img/book1.gif
       - assets/img/arduino.jpg
       - assets/img/nodemcu.jpg
+      - assets/img/myself.jpeg
 
   fonts:
     - family: WorkSansSemiBold

@@ -90,7 +90,7 @@ class _BookRow extends State<HomePage> {
               onTap: () {
   Navigator.push(
     context, new MaterialPageRoute(
-      builder: (context) => new ComponentList()));
+      builder: (context) => new AccountScreen()));
   },
           ),
           new ListTile(

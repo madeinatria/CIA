@@ -33,7 +33,7 @@ class UIData {
   static const String quickLightFont = "Quicksand_Light.otf";
 
   //images
-  static const String imageDir = "assets/images";
+  static const String imageDir = "assets/img";
   static const String pkImage = "$imageDir/pk.jpg";
   static const String arduino = "$imageDir/arduino.jpg";
   static const String blankImage = "$imageDir/blank.jpg";
