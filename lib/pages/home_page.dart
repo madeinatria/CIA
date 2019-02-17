@@ -13,23 +13,31 @@ class HomePage extends StatefulWidget {
 }
 
 class _BookRow extends State<HomePage> {
+  
   PageController pageController = new PageController(viewportFraction: 0.85);
 
   @override
   Widget build(BuildContext context) {
     
+  
     return new MaterialApp(
       
       home: Scaffold(
         appBar: new AppBar(title: new Text("CIA"),backgroundColor: Colors.orange,),
+        
+        
         drawer: Drawer(
+          
           
           
       child: ListView(
         padding: EdgeInsets.zero,
+        
         children: <Widget>[
-          new Container(),
+          
+                   
           UserAccountsDrawerHeader(
+            
             accountName: Text(
               "vamsi",
             ),
@@ -38,6 +46,7 @@ class _BookRow extends State<HomePage> {
             ),
             currentAccountPicture: new CircleAvatar(
               backgroundImage: new AssetImage("assets/img/login_logo.png"),
+              backgroundColor: Colors.orange,
             ),
             
           ),
@@ -185,6 +194,7 @@ class _BookRow extends State<HomePage> {
               ),
             );
           }).toList())),
+          
             new Padding(
                       padding: const EdgeInsets.only(left: 20.0, bottom: 1.0),
                     ),
