@@ -24,6 +24,9 @@ flutter:
 
   assets:
       - assets/login_logo.png
+      - assets/img/book1.gif
+      - assets/img/arduino.jpg
+      - assets/img/nodemcu.jpg
 
   fonts:
     - family: WorkSansSemiBold
