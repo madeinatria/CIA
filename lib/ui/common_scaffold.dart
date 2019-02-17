@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:cia/ui/custom_float.dart';
 import 'package:cia/utils/uidata.dart';
-import 'package:cia/pages/edit_profile.dart';
+//import 'package:cia/pages/edit_profile.dart';
+import 'package:cia/pages/profile_page.dart';
 
 class CommonScaffold extends StatelessWidget {
   final appTitle;
@@ -119,7 +120,7 @@ class CommonScaffold extends StatelessWidget {
               icon: floatingIcon,
               qrCallback: () {Navigator.push(
     context, new MaterialPageRoute(
-      builder: (context) => new EditProfile()));},
+      builder: (context) => new ProfileOnePage()));},
             )
           : null,
       floatingActionButtonLocation: centerDocked

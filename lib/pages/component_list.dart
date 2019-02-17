@@ -8,7 +8,7 @@ class AccountScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      
+       debugShowCheckedModeBanner: false,
       home: new ComponentAllList() ,
     );
 }}
@@ -27,21 +27,21 @@ class _ComponentAllListState extends State<ComponentAllList> {
 
 Future<List<ComponentItem>>  _getUsers() async {
 
-var data = await http.get('http://dayum.co.nf/api/get-locations.php');
+var data = await http.post('http://139.59.61.35/sufi/item/get');
 
 var jsonData =  json.decode(data.body);
 
 List<ComponentItem> componentitemlist = [];
 
 for (var component in jsonData){
-  ComponentItem element = ComponentItem(component['item_id']);
+  ComponentItem element = ComponentItem(component["item_name"]);
   componentitemlist.add(element);
 
 }
 
+return componentitemlist;
 print(componentitemlist.length);
 
-return componentitemlist;
 
 }
 
@@ -49,21 +49,40 @@ return componentitemlist;
   Widget build(BuildContext context) {
     // TODO: implement build
     return new Scaffold(
+      
       appBar: new AppBar(
-        title: new Text("Account"),
+        title: new Text("Component List"),
+        
       ),
       body: new Container(
           child: FutureBuilder(
 
           future: _getUsers(),
             builder: (BuildContext context, AsyncSnapshot snapshot){
+            
+            if(snapshot.data == null ){
+              
+              return Container(
+                child: Center(
+                  child: Text("Loading"),
+                ),
+              );
+              
+              
+            }
+            else{
               return ListView.builder(
                 itemCount: snapshot.data.length,
                 itemBuilder: (BuildContext context, int index){
                   return ListTile(
-                    title: Text(snapshot.data[index].itemId),);
+                    title: Text(snapshot.data[index].itemName),
+                    
+                  );
                 },
               );
+              
+            }
+              
             },
           ),
           ),
@@ -75,7 +94,14 @@ return componentitemlist;
 class ComponentItem {
 
   ComponentItem(String i){
-    this.itemId =i;
+    this.itemName =i;
+  }
+
+
+
+  
+  String getItemName(){
+    return itemName;
   }
 
 

@@ -29,7 +29,7 @@ flutter:
       - assets/img/book1.gif
       - assets/img/arduino.jpg
       - assets/img/nodemcu.jpg
-      - assets/img/myself.jpeg
+
 
   fonts:
     - family: WorkSansSemiBold
