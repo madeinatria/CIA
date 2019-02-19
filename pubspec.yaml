@@ -29,6 +29,7 @@ flutter:
       - assets/img/book1.gif
       - assets/img/arduino.jpg
       - assets/img/nodemcu.jpg
+      - assets/logo_bro.png
 
 
   fonts:

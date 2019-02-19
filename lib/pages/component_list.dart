@@ -25,31 +25,23 @@ _ComponentAllListState createState() => new _ComponentAllListState();
 class _ComponentAllListState extends State<ComponentAllList> {
 
 
+
+////////////////////////////////////////////////////////////////////////////////////////
 Future<List<ComponentItem>>  _getUsers() async {
-
 var data = await http.post('http://139.59.61.35/sufi/item/get');
-
 var jsonData =  json.decode(data.body);
-
 List<ComponentItem> componentitemlist = [];
-
 for (var component in jsonData){
   ComponentItem element = ComponentItem(component["item_name"]);
   componentitemlist.add(element);
-
 }
-
 return componentitemlist;
-print(componentitemlist.length);
-
-
 }
-
-  @override
-  Widget build(BuildContext context) {
+////////////////////////////////////////////////////////////////////////////////////////
+@override
+Widget build(BuildContext context) {
     // TODO: implement build
     return new Scaffold(
-      
       appBar: new AppBar(
         title: new Text("Component List"),
         
@@ -144,3 +136,5 @@ class ComponentItem {
    int vendorDetailsVendorId;
 
 }
+
+

@@ -5,6 +5,8 @@ class ProfileTile extends StatelessWidget {
   final subtitle;
   final textColor;
   ProfileTile({this.title, this.subtitle, this.textColor = Colors.black});
+
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -27,4 +29,6 @@ class ProfileTile extends StatelessWidget {
       ],
     );
   }
+
+
 }
